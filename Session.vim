@@ -13,12 +13,15 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +1 keyboards/muellerbernd/sweep/keymaps/bernd/keymap.c
+badd +77 keyboards/muellerbernd/sweep/keymaps/bernd/keymap.c
+badd +62 keyboards/muellerbernd/ferris/sweep/config.h
+badd +15 keyboards/muellerbernd/ferris/sweep/rules.mk
 argglobal
 %argdel
 $argadd keyboards/muellerbernd/sweep/keymaps/bernd/keymap.c
 edit keyboards/muellerbernd/sweep/keymaps/bernd/keymap.c
 argglobal
+balt keyboards/muellerbernd/ferris/sweep/config.h
 setlocal fdm=indent
 setlocal fde=nvim_treesitter#foldexpr()
 setlocal fmr={{{,}}}
@@ -27,12 +30,12 @@ setlocal fdl=5
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 77 - ((42 * winheight(0) + 25) / 51)
+let s:l = 77 - ((18 * winheight(0) + 25) / 50)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 77
-normal! 023|
+normal! 0
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
