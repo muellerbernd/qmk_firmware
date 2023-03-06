@@ -2,10 +2,9 @@
  * File              : config.h
  * Author            : Bernd Müller <bernd@muellerbernd.de>
  * Date              : 29.11.2021
- * Last Modified Date: 09.01.2023
+ * Last Modified Date: 06.03.2023
  * Last Modified By  : Bernd Müller <bernd@muellerbernd.de>
  */
-#include "config_common.h"
 #include "users/muellerbernd/common_conf.h"
 /*
 
