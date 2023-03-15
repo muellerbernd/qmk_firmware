@@ -14,25 +14,17 @@ else
   set shortmess=aoO
 endif
 badd +77 keyboards/muellerbernd/sweep/keymaps/bernd/keymap.c
-badd +15 keyboards/muellerbernd/ferris/sweep/rules.mk
-badd +18 keyboards/muellerbernd/kimiko/info.json
-badd +4 keyboards/muellerbernd/kimiko/keymaps/bernd/config.h
-badd +4 keyboards/muellerbernd/kimiko/keymaps/bernd/rules.mk
-badd +20 keyboards/muellerbernd/kimiko/kimiko.h
-badd +9 keyboards/muellerbernd/ferris/sweep/info.json
-badd +11 keyboards/muellerbernd/skeletyl/info.json
-badd +11 keyboards/muellerbernd/sweep/info.json
-badd +20 keyboards/muellerbernd/sweep/config.h
-badd +1 keyboards/muellerbernd/sweep/keymaps/bernd-kb2040/config.h
-badd +1 keyboards/muellerbernd/sweep/keymaps/bernd/config.h
-badd +85 keyboards/muellerbernd/sweep/sweep.c
-badd +0 keyboards/muellerbernd/sweep/sweep.h
+badd +19 keyboards/muellerbernd/sweep/keymaps/bernd-kb2040/config.h
+badd +17 keyboards/muellerbernd/sweep/sweep.c
+badd +19 keyboards/muellerbernd/sweep/sweep.h
+badd +2 keyboards/muellerbernd/sweep/keymaps/bernd-kb2040/rules.mk
+badd +1 users/muellerbernd/common_conf.h
 argglobal
 %argdel
 $argadd keyboards/muellerbernd/sweep/keymaps/bernd/keymap.c
 edit keyboards/muellerbernd/sweep/sweep.h
 argglobal
-balt keyboards/muellerbernd/sweep/sweep.c
+balt keyboards/muellerbernd/sweep/keymaps/bernd-kb2040/rules.mk
 setlocal fdm=indent
 setlocal fde=nvim_treesitter#foldexpr()
 setlocal fmr={{{,}}}
@@ -41,7 +33,7 @@ setlocal fdl=5
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 25) / 50)
+let s:l = 1 - ((0 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
