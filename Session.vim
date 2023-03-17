@@ -15,9 +15,9 @@ else
 endif
 badd +77 keyboards/muellerbernd/sweep/keymaps/bernd/keymap.c
 badd +19 keyboards/muellerbernd/sweep/keymaps/bernd-kb2040/config.h
-badd +17 keyboards/muellerbernd/sweep/sweep.c
+badd +54 keyboards/muellerbernd/sweep/sweep.c
 badd +19 keyboards/muellerbernd/sweep/sweep.h
-badd +2 keyboards/muellerbernd/sweep/keymaps/bernd-kb2040/rules.mk
+badd +1 keyboards/muellerbernd/sweep/keymaps/bernd-kb2040/rules.mk
 badd +1 users/muellerbernd/common_conf.h
 argglobal
 %argdel
@@ -33,7 +33,7 @@ setlocal fdl=5
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 25) / 51)
+let s:l = 1 - ((0 * winheight(0) + 47) / 95)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
