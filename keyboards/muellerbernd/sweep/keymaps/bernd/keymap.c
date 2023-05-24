@@ -110,11 +110,6 @@ _______, _______, _______, _______
 #include "users/muellerbernd/leader.c"
 #endif // LEADER_ENABLE
 
-#ifdef COMBO_ENABLE
-// #include "users/muellerbernd/combos.c"
-#include "g/keymap_combo.h"
-#endif
-
 // SSD1306 OLED update loop, make sure to enable OLED_ENABLE=yes in
 // rules.mk
 #ifdef OLED_ENABLE

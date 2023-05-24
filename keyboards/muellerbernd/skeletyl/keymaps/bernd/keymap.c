@@ -61,29 +61,6 @@ _______, _______, _______, _______
 #include "users/muellerbernd/leader.c"
 #endif // LEADER_ENABLE
 
-#ifdef COMBO_ENABLE
-// #include "users/muellerbernd/combos.c"
-#include "g/keymap_combo.h"
-#endif
-
-// SSD1306 OLED update loop, make sure to enable OLED_ENABLE=yes in
-// rules.mk
-#ifdef OLED_ENABLE
-oled_rotation_t oled_init_user(oled_rotation_t rotation)
-{
-    return OLED_ROTATION_270;
-}
-#include "users/muellerbernd/keylogger.c"
-/* static bool display_on = true; */
-#ifdef CAT_ENABLE
-#include "users/muellerbernd/bongo.c"
-#endif // CAT_ENABLE
-#ifdef LUNA_ENABLE
-#include "users/muellerbernd/luna.c"
-#endif
-#include "users/muellerbernd/oled.c"
-#endif // OLED_ENABLE
-
 #ifdef ENCODER_ENABLE
 bool encoder_update_user(uint8_t index, bool clockwise)
 {
