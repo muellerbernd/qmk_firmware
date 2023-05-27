@@ -18,10 +18,14 @@ MUSIC_ENABLE = no
 AUTO_SHIFT_ENABLE = no
 CONSOLE_ENABLE = no
 COMMAND_ENABLE = no
-VPATH += keyboards/gboards
 AVR_USE_MINIMAL_PRINTF = yes
 # POINTING_DEVICE_ENABLE = yes
 PIMORONI_TRACKBALL_ENABLE = yes
+
+# VPATH += keyboards/gboards
+ifeq ($(strip $(COMBO_ENABLE)), yes)
+	SRC += users/muellerbernd/combo.c
+endif
 
 ifeq ($(strip $(PIMORONI_TRACKBALL_ENABLE)), yes)
 	POINTING_DEVICE_ENABLE = yes

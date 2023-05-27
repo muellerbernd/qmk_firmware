@@ -118,7 +118,7 @@ _______, _______, _______, _______, EE_CLR, QK_BOOT, _______, _______, _______, 
 
 #ifdef COMBO_ENABLE
 // #include "users/muellerbernd/combos.c"
-#include "g/keymap_combo.h"
+//#include "g/keymap_combo.h"
 #endif
 
 // SSD1306 OLED update loop, make sure to enable OLED_ENABLE=yes in

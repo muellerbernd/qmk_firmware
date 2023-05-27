@@ -2,7 +2,7 @@
  * File              : keymap.c
  * Author            : Bernd Müller <bernd@muellerbernd.de>
  * Date              : 07.01.2022
- * Last Modified Date: 14.02.2023
+ * Last Modified Date: 24.05.2023
  * Last Modified By  : Bernd Müller <bernd@muellerbernd.de>
  */
 #include QMK_KEYBOARD_H
@@ -119,8 +119,4 @@ _______, QK_BOOT, QK_BOOT, _______
 #include "users/muellerbernd/leader.c"
 #endif // LEADER_ENABLE
 
-#ifdef COMBO_ENABLE
-// #include "users/muellerbernd/combos.c"
-#include "g/keymap_combo.h"
-#endif
 #include "users/muellerbernd/process_record_user.c"

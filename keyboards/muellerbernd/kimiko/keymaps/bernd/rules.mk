@@ -20,10 +20,14 @@ GRAVE_ESC_ENABLE = no
 MAGIC_ENABLE = no
 MUSIC_ENABLE = no
 AUTO_SHIFT_ENABLE = no
-VPATH += keyboards/gboards
 POINTING_DEVICE_ENABLE = yes
 POINTING_DEVICE_DRIVER = cirque_pinnacle_i2c
 AVR_USE_MINIMAL_PRINTF = yes
+
+# VPATH += keyboards/gboards
+ifeq ($(strip $(COMBO_ENABLE)), yes)
+	SRC += users/muellerbernd/combo.c
+endif
 
 CUSTOM_SPLIT_TRANSPORT_SYNC = no
 ifeq ($(strip $(CUSTOM_SPLIT_TRANSPORT_SYNC)), yes)

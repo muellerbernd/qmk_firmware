@@ -18,7 +18,12 @@ MUSIC_ENABLE = no
 AUTO_SHIFT_ENABLE = no
 CONSOLE_ENABLE = no
 COMMAND_ENABLE = no
-VPATH += keyboards/gboards
+
+# VPATH += keyboards/gboards
+ifeq ($(strip $(COMBO_ENABLE)), yes)
+	SRC += users/muellerbernd/combo.c
+endif
+
 
 # POINTING_DEVICE_ENABLE = yes
 PIMORONI_TRACKBALL_ENABLE = yes
