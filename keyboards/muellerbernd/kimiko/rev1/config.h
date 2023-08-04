@@ -39,7 +39,7 @@
 #define SOFT_SERIAL_PIN D2
 
 /* SK6812 RGB LED */
-#define RGB_DI_PIN D3
+#define WS2812_DI_PIN D3
 
 #ifdef RGBLIGHT_ENABLE
 #   define RGBLED_NUM 60  // Total number of LEDs
