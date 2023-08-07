@@ -24,7 +24,8 @@ PIMORONI_TRACKBALL_ENABLE = yes
 
 # VPATH += keyboards/gboards
 ifeq ($(strip $(COMBO_ENABLE)), yes)
-	SRC += users/muellerbernd/combo.c
+	# SRC += users/muellerbernd/combo.c
+	INTROSPECTION_KEYMAP_C = users/muellerbernd/combo.c
 endif
 
 ifeq ($(strip $(PIMORONI_TRACKBALL_ENABLE)), yes)

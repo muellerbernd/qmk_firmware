@@ -16,15 +16,17 @@ endif
 badd +77 keyboards/muellerbernd/sweep/keymaps/bernd/keymap.c
 badd +19 keyboards/muellerbernd/sweep/keymaps/bernd-kb2040/config.h
 badd +54 keyboards/muellerbernd/sweep/sweep.c
-badd +19 keyboards/muellerbernd/sweep/sweep.h
-badd +1 keyboards/muellerbernd/sweep/keymaps/bernd-kb2040/rules.mk
-badd +1 users/muellerbernd/common_conf.h
+badd +1 keyboards/muellerbernd/sweep/sweep.h
+badd +24 keyboards/muellerbernd/sweep/keymaps/bernd-kb2040/rules.mk
+badd +27 users/muellerbernd/common_conf.h
+badd +28 keyboards/muellerbernd/sweep/keymaps/bernd/rules.mk
+badd +36 keyboards/muellerbernd/sweep/keymaps/bernd/config.h
 argglobal
 %argdel
 $argadd keyboards/muellerbernd/sweep/keymaps/bernd/keymap.c
-edit keyboards/muellerbernd/sweep/sweep.h
+edit keyboards/muellerbernd/sweep/keymaps/bernd/config.h
 argglobal
-balt keyboards/muellerbernd/sweep/keymaps/bernd-kb2040/rules.mk
+balt keyboards/muellerbernd/sweep/keymaps/bernd/keymap.c
 setlocal fdm=indent
 setlocal fde=nvim_treesitter#foldexpr()
 setlocal fmr={{{,}}}
@@ -33,12 +35,12 @@ setlocal fdl=5
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 47) / 95)
+let s:l = 36 - ((35 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
-normal! 0
+keepjumps 36
+normal! 021|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

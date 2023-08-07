@@ -2,7 +2,7 @@
  * File              : config.h
  * Author            : Bernd Müller <bernd@muellerbernd.de>
  * Date              : 29.11.2021
- * Last Modified Date: 06.03.2023
+ * Last Modified Date: 07.08.2023
  * Last Modified By  : Bernd Müller <bernd@muellerbernd.de>
  */
 #include "users/muellerbernd/common_conf.h"
@@ -32,7 +32,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #undef RGBLED_NUM
 /* SK6812 RGB LED */
-#define RGB_DI_PIN D3
+#define WS2812_DI_PIN D3
 
 #ifdef RGBLIGHT_ENABLE
 #define RGBLED_NUM 30 // Total number of LEDs
