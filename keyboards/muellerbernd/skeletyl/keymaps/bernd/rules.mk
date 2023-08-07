@@ -2,7 +2,7 @@
 # File              : rules.mk
 # Author            : Bernd Müller <bernd@muellerbernd.de>
 # Date              : 29.11.2021
-# Last Modified Date: 24.05.2023
+# Last Modified Date: 07.08.2023
 # Last Modified By  : Bernd Müller <bernd@muellerbernd.de>
 RGBLIGHT_ENABLE = yes       # Enable WS2812 RGB underlight.
 OLED_ENABLE = no
@@ -27,7 +27,8 @@ CONSOLE_ENABLE = yes
 COMMAND_ENABLE = no
 # VPATH += keyboards/gboards
 ifeq ($(strip $(COMBO_ENABLE)), yes)
-	SRC += users/muellerbernd/combo.c
+	# SRC += users/muellerbernd/combo.c
+	INTROSPECTION_KEYMAP_C = users/muellerbernd/combo.c
 endif
 
 PIMORONI_TRACKBALL_ENABLE = yes
