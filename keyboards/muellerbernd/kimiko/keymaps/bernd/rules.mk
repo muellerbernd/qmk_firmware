@@ -26,7 +26,8 @@ AVR_USE_MINIMAL_PRINTF = yes
 
 # VPATH += keyboards/gboards
 ifeq ($(strip $(COMBO_ENABLE)), yes)
-	SRC += users/muellerbernd/combo.c
+	# SRC += users/muellerbernd/combo.c
+	INTROSPECTION_KEYMAP_C = users/muellerbernd/combo.c
 endif
 
 CUSTOM_SPLIT_TRANSPORT_SYNC = no
