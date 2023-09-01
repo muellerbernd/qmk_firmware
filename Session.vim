@@ -13,25 +13,15 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +77 keyboards/muellerbernd/sweep/keymaps/bernd/keymap.c
-badd +19 keyboards/muellerbernd/sweep/keymaps/bernd-kb2040/config.h
-badd +54 keyboards/muellerbernd/sweep/sweep.c
-badd +1 keyboards/muellerbernd/sweep/sweep.h
-badd +5 keyboards/muellerbernd/sweep/keymaps/bernd-kb2040/rules.mk
-badd +9 users/muellerbernd/common_conf.h
-badd +28 keyboards/muellerbernd/sweep/keymaps/bernd/rules.mk
-badd +43 keyboards/muellerbernd/sweep/keymaps/bernd/config.h
-badd +18 keyboards/muellerbernd/kimiko/keymaps/bernd/config.h
-badd +6 keyboards/muellerbernd/kimiko/keymaps/bernd/rules.mk
-badd +100 keyboards/muellerbernd/kimiko/keymaps/bernd/keymap.c
-badd +160 users/muellerbernd/muellerbernd.h
-badd +1 keyboards/muellerbernd/sweep/rules.mk
+badd +36 keyboards/muellerbernd/sweep/keymaps/bernd-kb2040/rules.mk
+badd +113 keyboards/muellerbernd/sweep/keymaps/bernd-kb2040/keymap.c
+badd +64 users/muellerbernd/pointing.c
 argglobal
 %argdel
 $argadd keyboards/muellerbernd/sweep/keymaps/bernd/keymap.c
-edit keyboards/muellerbernd/sweep/keymaps/bernd/rules.mk
+edit users/muellerbernd/pointing.c
 argglobal
-balt keyboards/muellerbernd/sweep/keymaps/bernd-kb2040/rules.mk
+balt keyboards/muellerbernd/sweep/keymaps/bernd-kb2040/keymap.c
 setlocal fdm=indent
 setlocal fde=nvim_treesitter#foldexpr()
 setlocal fmr={{{,}}}
@@ -40,12 +30,14 @@ setlocal fdl=5
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 5 - ((4 * winheight(0) + 25) / 51)
+59
+normal! zo
+let s:l = 1 - ((0 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 5
-normal! 015|
+keepjumps 1
+normal! 0
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

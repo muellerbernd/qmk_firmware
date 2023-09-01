@@ -57,7 +57,7 @@ ifeq ($(strip $(RP2040_ENABLE)), yes)
 	BOOTMAGIC_ENABLE = no
 endif
 
-CUSTOM_SPLIT_TRANSPORT_SYNC ?= yes
+CUSTOM_SPLIT_TRANSPORT_SYNC ?= no
 ifeq ($(strip $(CUSTOM_SPLIT_TRANSPORT_SYNC)), yes)
 	# QUANTUM_LIB_SRC += $(USER_PATH)/split/transport_sync.c
 	OPT_DEFS += -DCUSTOM_SPLIT_TRANSPORT_SYNC

@@ -5,7 +5,7 @@
 #include "string.h"
 static uint32_t last_mouse_activity = 0;
 static report_mouse_t last_mouse_report = {0};
-bool isScrolling = false;
+bool is_scrolling = false;
 // uint16_t default_cpi = 65535;
 uint16_t default_cpi = 30000;
 // uint16_t default_cpi = 6000;
@@ -20,7 +20,7 @@ report_mouse_t smooth_mouse_movement(report_mouse_t mouse_report)
     int8_t h = 0;
     int8_t v = 0;
 
-    if (!isScrolling)
+    if (!is_scrolling)
     {
         x = ease8InOutApprox(
             lerp8by8(last_mouse_report.x, mouse_report.x, fract));
