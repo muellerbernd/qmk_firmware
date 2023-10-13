@@ -15,9 +15,6 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-// #pragma once
-#include_next <halconf.h>
-
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
 // #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 500U
 //
@@ -97,10 +94,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #endif // ENCODER_ENABLE
 
 #ifdef POINTING_DEVICE_ENABLE
-// #define MOUSE_EXTENDED_REPORT
 #define SPLIT_POINTING_ENABLE
 #define POINTING_DEVICE_RIGHT
 #define POINTING_DEVICE_ROTATION_270
-// #define POINTING_DEVICE_INVERT_X
-// #define POINTING_DEVICE_INVERT_Y
 #endif

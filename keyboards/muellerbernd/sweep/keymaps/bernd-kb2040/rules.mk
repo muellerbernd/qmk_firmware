@@ -10,7 +10,7 @@ ENCODER_ENABLE = yes      # use an encoder
 COMBO_ENABLE = yes
 TAP_DANCE_ENABLE = no
 LEADER_ENABLE = no
-CONSOLE_ENABLE = yes
+CONSOLE_ENABLE = no
 SPACE_CADET_ENABLE = no
 GRAVE_ESC_ENABLE = no
 MAGIC_ENABLE = no
@@ -32,29 +32,27 @@ PIMORONI_TRACKBALL_ENABLE = yes
 ifeq ($(strip $(PIMORONI_TRACKBALL_ENABLE)), yes)
 	POINTING_DEVICE_ENABLE = yes
 	POINTING_DEVICE_DRIVER = pimoroni_trackball
-	# SRC += pimoroni_trackball.c
-	# QUANTUM_LIB_SRC += i2c_master.c
 endif
 
 RP2040_ENABLE = yes
 ifeq ($(strip $(RP2040_ENABLE)), yes)
 	# MCU name
-	MCU = RP2040
+	# MCU = RP2040
 	# Bootloader selection
-	BOOTLOADER = rp2040
+	# BOOTLOADER = rp2040
 	# Ignore some warnings during the build, likely to be fixed before RP2040 PR is merged
-	ALLOW_WARNINGS = yes
+	# ALLOW_WARNINGS = yes
 	# LTO must be disabled for RP2040 builds
-	LTO_ENABLE = no
+	# LTO_ENABLE = no
 	# # PIO serial/WS2812 drivers must be used on RP2040
 	# SERIAL_DRIVER = vendor
 	# WS2812_DRIVER = vendor
 	# Audio currently doesn't work with the RP2040
-	AUDIO_ENABLE = no
+	# AUDIO_ENABLE = no
 	# convert to rp2040 pinout. if you use the kb2040 comment this line and uncomment the second line
 	# CONVERT_TO = promicro_rp2040
 	CONVERT_TO = kb2040
-	BOOTMAGIC_ENABLE = no
+	# BOOTMAGIC_ENABLE = no
 endif
 
 CUSTOM_SPLIT_TRANSPORT_SYNC ?= no
