@@ -13,15 +13,18 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +119 users/muellerbernd/common_conf.h
-badd +53 keyboards/muellerbernd/kimiko/keymaps/bernd/config.h
-badd +24 keyboards/muellerbernd/kimiko/keymaps/bernd/rules.mk
+badd +121 users/muellerbernd/common_conf.h
+badd +60 keyboards/muellerbernd/kimiko/keymaps/bernd/config.h
+badd +34 keyboards/muellerbernd/kimiko/keymaps/bernd/rules.mk
+badd +0 keyboards/muellerbernd/sweep/keymaps/bernd/keymap.c
+badd +17 keyboards/muellerbernd/kimiko/info.json
+badd +0 keyboards/muellerbernd/sweep/keymaps/bernd-kb2040/rules.mk
 argglobal
 %argdel
 $argadd keyboards/muellerbernd/sweep/keymaps/bernd/keymap.c
-edit keyboards/muellerbernd/kimiko/keymaps/bernd/config.h
+edit keyboards/muellerbernd/sweep/keymaps/bernd-kb2040/rules.mk
 argglobal
-balt keyboards/muellerbernd/kimiko/keymaps/bernd/rules.mk
+balt keyboards/muellerbernd/kimiko/info.json
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -32,12 +35,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 53 - ((39 * winheight(0) + 26) / 52)
+let s:l = 37 - ((36 * winheight(0) + 48) / 96)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 53
-normal! 032|
+keepjumps 37
+normal! 0
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
