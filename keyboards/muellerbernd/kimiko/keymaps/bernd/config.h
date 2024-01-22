@@ -48,13 +48,20 @@
 #endif
 
 #ifdef POINTING_DEVICE_ENABLE
+// Enable use of pointing device on slave split.
+#define SPLIT_POINTING_ENABLE
+// Pointing device is on the right split.
+#define POINTING_DEVICE_RIGHT
 #define POINTING_DEVICE_RIGHT
 #define POINTING_DEVICE_ROTATION_90
 #define POINTING_DEVICE_INVERT_X
 #define POINTING_DEVICE_INVERT_Y
 #define CIRQUE_PINNACLE_DIAMETER_MM 40
 #define CIRQUE_PINNACLE_TAP_ENABLE
+// Circular scroll.
 #define POINTING_DEVICE_GESTURES_SCROLL_ENABLE
+// Limits the frequency that the sensor is polled for motion.
+#define POINTING_DEVICE_TASK_THROTTLE_MS 10
 #endif
 
 #ifdef OLED_ENABLE

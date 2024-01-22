@@ -13,41 +13,34 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +101 keyboards/muellerbernd/sweep/keymaps/bernd-kb2040/config.h
-badd +37 keyboards/muellerbernd/sweep/keymaps/bernd-kb2040/rules.mk
-badd +122 users/muellerbernd/common_conf.h
-badd +113 keyboards/muellerbernd/sweep/keymaps/bernd-kb2040/keymap.c
-badd +64 users/muellerbernd/pointing.c
+badd +121 users/muellerbernd/common_conf.h
+badd +60 keyboards/muellerbernd/kimiko/keymaps/bernd/config.h
+badd +34 keyboards/muellerbernd/kimiko/keymaps/bernd/rules.mk
+badd +0 keyboards/muellerbernd/sweep/keymaps/bernd/keymap.c
+badd +17 keyboards/muellerbernd/kimiko/info.json
+badd +0 keyboards/muellerbernd/sweep/keymaps/bernd-kb2040/rules.mk
 argglobal
 %argdel
 $argadd keyboards/muellerbernd/sweep/keymaps/bernd/keymap.c
-edit users/muellerbernd/pointing.c
+edit keyboards/muellerbernd/sweep/keymaps/bernd-kb2040/rules.mk
 argglobal
-balt keyboards/muellerbernd/sweep/keymaps/bernd-kb2040/keymap.c
-setlocal fdm=indent
-setlocal fde=nvim_treesitter#foldexpr()
+balt keyboards/muellerbernd/kimiko/info.json
+setlocal fdm=manual
+setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
-setlocal fdl=5
+setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-64
-normal! zo
-74
-normal! zo
-77
-normal! zo
-92
-normal! zo
-101
-normal! zo
-let s:l = 1 - ((0 * winheight(0) + 25) / 51)
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 52 - ((51 * winheight(0) + 48) / 96)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
-normal! 0
+keepjumps 52
+normal! 05|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
