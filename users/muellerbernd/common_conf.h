@@ -126,3 +126,7 @@
 #define MOUSEKEY_WHEEL_INTERVAL 110 // 100
 // #define MOUSEKEY_WHEEL_MAX_SPEED 3 // 8
 #endif // MOUSEKEY_ENABLE
+
+// fix not detecting of keyboard on boot or on docking station
+#define SPLIT_WATCHDOG_ENABLE
+#define NO_USB_STARTUP_CHECK
