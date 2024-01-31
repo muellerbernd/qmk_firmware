@@ -13,12 +13,10 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +132 users/muellerbernd/common_conf.h
-badd +60 keyboards/muellerbernd/kimiko/keymaps/bernd/config.h
-badd +34 keyboards/muellerbernd/kimiko/keymaps/bernd/rules.mk
-badd +1 keyboards/muellerbernd/sweep/keymaps/bernd/keymap.c
-badd +17 keyboards/muellerbernd/kimiko/info.json
-badd +52 keyboards/muellerbernd/sweep/keymaps/bernd-kb2040/rules.mk
+badd +121 users/muellerbernd/common_conf.h
+badd +48 keyboards/muellerbernd/sweep/keymaps/bernd-kb2040/rules.mk
+badd +77 users/muellerbernd/pointing.c
+badd +97 keyboards/muellerbernd/sweep/keymaps/bernd-kb2040/config.h
 argglobal
 %argdel
 $argadd keyboards/muellerbernd/sweep/keymaps/bernd/keymap.c
@@ -35,7 +33,7 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 47) / 95)
+let s:l = 1 - ((0 * winheight(0) + 25) / 50)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
