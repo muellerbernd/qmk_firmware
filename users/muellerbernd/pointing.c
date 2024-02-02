@@ -33,8 +33,8 @@
 
 void pointing_device_init_user(void) {
     // default_cpi = pointing_device_get_cpi();
-    // pointing_device_set_cpi(8000);
-    pimoroni_trackball_set_rgbw(180, 180, 180, 1);
+    pointing_device_set_cpi(18000);
+    // pimoroni_trackball_set_rgbw(180, 180, 180, 1);
 }
 
 // static uint32_t       last_mouse_activity = 0;

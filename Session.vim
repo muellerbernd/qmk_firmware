@@ -13,27 +13,23 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +121 users/muellerbernd/common_conf.h
-badd +48 keyboards/muellerbernd/sweep/keymaps/bernd-kb2040/rules.mk
-badd +77 users/muellerbernd/pointing.c
-badd +97 keyboards/muellerbernd/sweep/keymaps/bernd-kb2040/config.h
+badd +123 users/muellerbernd/common_conf.h
+badd +36 users/muellerbernd/pointing.c
 argglobal
 %argdel
 $argadd keyboards/muellerbernd/sweep/keymaps/bernd/keymap.c
-edit keyboards/muellerbernd/sweep/keymaps/bernd-kb2040/rules.mk
+edit users/muellerbernd/common_conf.h
 argglobal
-balt users/muellerbernd/common_conf.h
-setlocal fdm=manual
-setlocal fde=0
+balt users/muellerbernd/pointing.c
+setlocal fdm=expr
+setlocal fde=v:lua.vim.treesitter.foldexpr()
 setlocal fmr={{{,}}}
 setlocal fdi=#
 setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 25) / 50)
+setlocal nofen
+let s:l = 1 - ((0 * winheight(0) + 47) / 95)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
@@ -52,6 +48,7 @@ if filereadable(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
+nohlsearch
 let g:this_session = v:this_session
 let g:this_obsession = v:this_session
 doautoall SessionLoadPost
