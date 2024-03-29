@@ -45,6 +45,17 @@ B5    9 │o o│ 10   B6
         └───┘
 */
 
+/* Serial communication */
+// #define SERIAL_USART_FULL_DUPLEX
+// #define SERIAL_PIO_USE_PIO0
+// #define SERIAL_USART_TX_PIN GP0
+// #define SERIAL_USART_RX_PIN GP1
+
 #define SPLIT_USB_TIMEOUT_POLL 10
 #define SPLIT_WATCHDOG_ENABLE
 #define SPLIT_WATCHDOG_TIMEOUT 3000
+
+/* Double tap reset button to enter bootloader */
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_LED GP17
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 500U

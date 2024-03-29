@@ -1,6 +1,3 @@
-RGBLIGHT_ENABLE = no       # Enable WS2812 RGB underlight.
-RGB_MATRIX_ENABLE = no
-RGB_MATRIX_DRIVER = ws2812
 OLED_ENABLE = yes
 OLED_DRIVER = ssd1306
 WPM_ENABLE = yes
@@ -8,16 +5,6 @@ MOUSEKEY_ENABLE = yes       # Mouse keys
 EXTRAKEY_ENABLE = yes       # Audio control and System control
 ENCODER_ENABLE = yes      # use an encoder
 COMBO_ENABLE = yes
-TAP_DANCE_ENABLE = no
-LEADER_ENABLE = no
-CONSOLE_ENABLE = no
-SPACE_CADET_ENABLE = no
-GRAVE_ESC_ENABLE = no
-MAGIC_ENABLE = no
-MUSIC_ENABLE = no
-AUTO_SHIFT_ENABLE = no
-CONSOLE_ENABLE = no
-COMMAND_ENABLE = no
 
 # VPATH += keyboards/gboards
 ifeq ($(strip $(COMBO_ENABLE)), yes)
@@ -27,7 +14,7 @@ endif
 
 
 # POINTING_DEVICE_ENABLE = yes
-PIMORONI_TRACKBALL_ENABLE = yes
+PIMORONI_TRACKBALL_ENABLE = no
 
 ifeq ($(strip $(PIMORONI_TRACKBALL_ENABLE)), yes)
 POINTING_DEVICE_ENABLE = yes

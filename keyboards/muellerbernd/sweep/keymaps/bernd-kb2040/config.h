@@ -27,7 +27,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #    define RGBLIGHT_SPLIT
 // #define RGBLIGHT_LIMIT_VAL 80
 // Limit the power draw
-#    define RGBLIGHT_LIMIT_VAL 150
+// #    define RGBLIGHT_LIMIT_VAL 150
 // #define RGBLIGHT_EFFECT_RGB_TEST
 // #define RGBLIGHT_EFFECT_BREATHING
 // #define RGBLIGHT_EFFECT_RAINBOW_MOOD
@@ -78,3 +78,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #    define POINTING_DEVICE_RIGHT
 #    define POINTING_DEVICE_ROTATION_270
 #endif
+
+#define SPLIT_USB_DETECT

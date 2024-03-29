@@ -1,5 +1,5 @@
 {
-    "keyboard_name": "sweep",
+    "keyboard_name": "ilm_sweep",
     "manufacturer": "muellerbernd",
     "url": "",
     "maintainer": "muellerbernd",
@@ -11,6 +11,7 @@
     "bootloader_instructions": "Press and hold the boot button while plugging in the keyboard",
     "processor": "RP2040",
     "bootloader": "rp2040",
+    "diode_direction": "COL2ROW",
     "matrix_pins": {
         "cols": [
             "GP10",
@@ -27,6 +28,7 @@
         ]
     },
     "encoder": {
+        "enabled": true,
         "rotary": [
             {
                 "pin_a": "GP28",
@@ -35,15 +37,60 @@
         ]
     },
     "split": {
-        "soft_serial_pin": "GP1"
+        "enabled": true,
+        "main": "left",
+        "soft_serial_pin": "GP1",
+        "transport": {
+            "protocol": "serial"
+        },
+        "usb_detect": {
+            "timeout": 2500
+        }
     },
-    "diode_direction": "COL2ROW",
-    "rgb_matrix": {
-        "driver": "ws2812"
+    "build": {
+        "lto": true
+    },
+    "debounce": 5,
+    "features": {
+        "bootmagic": true,
+        "command": false,
+        "console": false,
+        "extrakey": true,
+        "mousekey": true,
+        "nkro": false,
+        "rgb_matrix": false,
+        "rgblight": true,
+        "oled": true,
+        "key_override": true,
+        "combo": true,
+        "encoder": true
+    },
+    "rgblight": {
+        "led_count": 34,
+        "hue_steps": 4,
+        "saturation_steps": 5,
+        "brightness_steps": 5,
+        "max_brightness": 150,
+        "sleep": false,
+        "layers": {
+            "blink": true,
+            "enabled": true,
+            "max": 22,
+            "override_rgb": true
+        },
+        "animations": {
+            "breathing": true,
+            "christmas": true,
+            "rainbow_swirl": true,
+            "rgb_test": true
+        }
     },
     "ws2812": {
         "pin": "GP0",
         "driver": "vendor"
+    },
+    "rgb_matrix": {
+        "driver": "ws2812"
     },
     "layouts": {
         "LAYOUT": {

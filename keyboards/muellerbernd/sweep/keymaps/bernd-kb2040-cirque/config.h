@@ -29,11 +29,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Use I2C or Serial, not both */
 // #define USE_SERIAL_PD2
 // #define USE_SERIAL
-#define SOFT_SERIAL_PIN D2
+// #define SOFT_SERIAL_PIN D2
 
 #undef RGBLED_NUM
 // The pin connected to the data pin of the LEDs
-#define WS2812_DI_PIN D3
+// #define WS2812_DI_PIN D3
 
 #ifdef RGBLIGHT_ENABLE
 #define RGBLIGHT_LED_COUNT 34 // Total number of LEDs
@@ -86,8 +86,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #endif
 
 #ifdef ENCODER_ENABLE
-#define ENCODERS_PAD_A { F5 }
-#define ENCODERS_PAD_B { F4 }
+// #define ENCODERS_PAD_A { F5 }
+// #define ENCODERS_PAD_B { F4 }
 // #define ENCODERS_PAD_A_RIGHT { F4 }
 // #define ENCODERS_PAD_B_RIGHT { F5 }
 #define ENCODER_RESOLUTION 4
