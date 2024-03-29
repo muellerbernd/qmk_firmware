@@ -130,5 +130,5 @@
 #endif // MOUSEKEY_ENABLE
 
 // fix not detecting of keyboard on boot or on docking station
-#define SPLIT_WATCHDOG_ENABLE
+#define SPLIT_USB_DETECT
 #define NO_USB_STARTUP_CHECK

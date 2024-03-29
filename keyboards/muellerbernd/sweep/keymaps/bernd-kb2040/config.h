@@ -17,26 +17,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
 // #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 500U
-//
-// /* i2c */
-// #define I2C_DRIVER I2CD2
-//
-// /* communication between sides */
-// #define SERIAL_PIO_USE_PIO1
 
-// #undef USE_I2C
-// #define USE_SERIAL
-/* Use I2C or Serial, not both */
-// #define USE_SERIAL_PD2
-// #define USE_SERIAL
-#define SOFT_SERIAL_PIN D2
-
-#undef RGBLED_NUM
 // The pin connected to the data pin of the LEDs
-#define WS2812_DI_PIN D3
 
 #ifdef RGBLIGHT_ENABLE
-#define RGBLED_NUM 34 // Total number of LEDs
+#define RGBLIGHT_LED_COUNT 34 // Total number of LEDs
 #define RGBLED_SPLIT                                                           \
     {                                                                          \
         17, 17                                                                 \
@@ -58,7 +43,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #endif
 
 #ifdef RGB_MATRIX_ENABLE
-#define RGBLED_NUM 34 // Total number of LEDs
 // The number of LEDs connected
 #define RGB_MATRIX_LED_COUNT 34
 #define RGB_MATRIX_MAXIMUM_BRIGHTNESS                                          \
@@ -86,8 +70,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #endif
 
 #ifdef ENCODER_ENABLE
-#define ENCODERS_PAD_A { F5 }
-#define ENCODERS_PAD_B { F4 }
+// #define ENCODERS_PAD_A { F5 }
+// #define ENCODERS_PAD_B { F4 }
 // #define ENCODERS_PAD_A_RIGHT { F4 }
 // #define ENCODERS_PAD_B_RIGHT { F5 }
 #define ENCODER_RESOLUTION 4

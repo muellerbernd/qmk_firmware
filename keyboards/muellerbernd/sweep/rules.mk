@@ -1,44 +1,21 @@
-# MCU name
-MCU = atmega32u4
-
-# Bootloader selection
-#   Teensy       halfkay
-#   Pro Micro    caterina
-#   Atmel DFU    atmel-dfu
-#   LUFA DFU     lufa-dfu
-#   QMK DFU      qmk-dfu
-#   ATmega32A    bootloadHID
-#   ATmega328P   USBasp
-BOOTLOADER = caterina
-
 # Build Options
 #   change yes to no to disable
 #
-BOOTMAGIC_ENABLE = no      # Virtual DIP switch configuration
-MOUSEKEY_ENABLE = no       # Mouse keys
-EXTRAKEY_ENABLE = no       # Audio control and System control
+BOOTMAGIC_ENABLE = no      # Enable Bootmagic Lite
+MOUSEKEY_ENABLE = yes        # Mouse keys
+EXTRAKEY_ENABLE = yes       # Audio control and System control
 CONSOLE_ENABLE = no         # Console for debug
-COMMAND_ENABLE = no        # Commands for debug and configuration
-# Do not enable SLEEP_LED_ENABLE. it uses the same timer as BACKLIGHT_ENABLE
-SLEEP_LED_ENABLE = no       # Breathing sleep LED during USB suspend
-# if this doesn't work, see here: https://github.com/tmk/tmk_keyboard/wiki/FAQ#nkro-doesnt-work
-NKRO_ENABLE = no            # USB Nkey Rollover
-BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality on B7 by default
-MIDI_ENABLE = no            # MIDI support
-BLUETOOTH_ENABLE = no       # Enable Bluetooth with the Adafruit EZ-Key HID
-AUDIO_ENABLE = no           # Audio output on port C6
-RGBLIGHT_ENABLE = no       # Enable WS2812 RGB underlight.
-KEY_LOCK_ENABLE = no
-TERMINAL_ENABLE = no
-SWAP_HANDS_ENABLE = no
+COMMAND_ENABLE = no         # Commands for debug and configuration
+NKRO_ENABLE = no            # Enable N-Key Rollover
+BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
+RGBLIGHT_ENABLE = no        # Enable keyboard RGB underglow
+AUDIO_ENABLE = no           # Audio output
+
+AUDIO_SUPPORTED = no        # Audio is not supported
+# RGB_MATRIX_SUPPORTED = yes  # RGB matrix is supported and enabled by default
+# RGBLIGHT_SUPPORTED = yes    # RGB underglow is supported, but not enabled by default
+# RGB_MATRIX_ENABLE = yes     # Enable keyboard RGB matrix functionality
+
 SPLIT_KEYBOARD = yes
 
-# Disable unsupported hardware
-AUDIO_SUPPORTED = no
-BACKLIGHT_SUPPORTED = no
-CAT_ENABLE = yes
-
-UNICODE_ENABLE = no         # Unicode
-
-LTO_ENABLE = yes            # significantly reduce the compiled size, but disable the legacy TMK Macros and Functions features
-EXTRAFLAGS += -flto
+SERIAL_DRIVER = vendor

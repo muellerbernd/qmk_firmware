@@ -26,8 +26,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* key matrix size */
 // Rows are doubled-up
-#define MATRIX_ROWS 8
-#define MATRIX_COLS 5
+// #define MATRIX_ROWS 8
+// #define MATRIX_COLS 5
 /* Keyboard Matrix Assignments
 
 D3  TXO ┌─■─┐ RAW RAW
@@ -44,37 +44,3 @@ B4    8 │o o│ 16   B2
 B5    9 │o o│ 10   B6
         └───┘
 */
-
-// wiring of each half
-#define MATRIX_ROW_PINS                                                        \
-    {                                                                          \
-        D7, E6, B4, B5                                                         \
-    }
-// #define MATRIX_COL_PINS { B6, B2, B3, B1, F7, D4 }
-#define MATRIX_COL_PINS                                                        \
-    {                                                                          \
-        B6, B2, B3, B1, F7                                                 \
-    }
-// #define MATRIX_COL_PINS { B6, B2, B3, B1, F7, F6, F5} //uncomment this line
-// and comment line above if you need to reverse left-to-right key order
-// #define UNUSED_PINS
-/* COL2ROW or ROW2COL */
-#define DIODE_DIRECTION COL2ROW
-
-/* define if matrix has ghost */
-//#define MATRIX_HAS_GHOST
-
-/* number of backlight levels */
-// #define BACKLIGHT_LEVELS 3
-
-/* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
-/* Set 0 if debouncing isn't needed */
-#define DEBOUNCE 5
-/* communication between sides */
-#define USE_SERIAL
-#define SERIAL_USE_MULTI_TRANSACTION
-#define SOFT_SERIAL_PIN D2
-/*
- * Feature disable options
- *  These options are also useful to firmware size reduction.
- */

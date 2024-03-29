@@ -1,7 +1,5 @@
 #include QMK_KEYBOARD_H
 #include "keymap_german.h"
-#include "math.h"
-#include "sweep.h"
 #include "users/muellerbernd/muellerbernd.h"
 #include <stdio.h>
 #ifdef TAP_DANCE_ENABLE

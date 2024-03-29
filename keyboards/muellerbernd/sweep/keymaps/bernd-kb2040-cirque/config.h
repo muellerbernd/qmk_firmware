@@ -36,7 +36,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define WS2812_DI_PIN D3
 
 #ifdef RGBLIGHT_ENABLE
-#define RGBLED_NUM 34 // Total number of LEDs
+#define RGBLIGHT_LED_COUNT 34 // Total number of LEDs
 #define RGBLED_SPLIT                                                           \
     {                                                                          \
         17, 17                                                                 \
