@@ -59,3 +59,7 @@ B5    9 │o o│ 10   B6
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_LED GP17
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 500U
+
+#define SERIAL_PIO_USE_PIO0 // Force the usage of PIO1 peripheral, by default the Serial implementation uses the PIO0 peripheral
+
+#define SERIAL_DEBUG

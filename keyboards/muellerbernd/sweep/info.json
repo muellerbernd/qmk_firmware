@@ -38,7 +38,6 @@
     },
     "split": {
         "enabled": true,
-        "main": "left",
         "soft_serial_pin": "GP1",
         "transport": {
             "protocol": "serial"
@@ -54,7 +53,7 @@
     "features": {
         "bootmagic": true,
         "command": false,
-        "console": false,
+        "console": true,
         "extrakey": true,
         "mousekey": true,
         "nkro": false,
