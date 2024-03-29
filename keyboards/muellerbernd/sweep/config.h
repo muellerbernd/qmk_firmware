@@ -44,3 +44,7 @@ B4    8 │o o│ 16   B2
 B5    9 │o o│ 10   B6
         └───┘
 */
+
+#define SPLIT_USB_TIMEOUT_POLL 10
+#define SPLIT_WATCHDOG_ENABLE
+#define SPLIT_WATCHDOG_TIMEOUT 3000

@@ -16,8 +16,8 @@
 #undef RGBLIGHT_EFFECT_TWINKLE
 #ifdef RGBLIGHT_ENABLE
 // #define RGBLIGHT_EFFECT_STATIC_GRADIENT
-#define RGBLIGHT_SPLIT // sync LEDs between RIGHT and LEFT hand
-#endif // RGBLIGHT_ENABLE
+#    define RGBLIGHT_SPLIT // sync LEDs between RIGHT and LEFT hand
+#endif                     // RGBLIGHT_ENABLE
 
 // default but used in macros
 #undef TAPPING_TERM
@@ -74,34 +74,34 @@
 #endif
 
 #ifndef NO_DEBUG
-#define NO_DEBUG
+#    define NO_DEBUG
 #endif // !NO_DEBUG
 #if !defined(NO_PRINT) && !defined(CONSOLE_ENABLE)
-#define NO_PRINT
+#    define NO_PRINT
 #endif // !NO_PRINT
 
 #ifdef OLED_ENABLE
-#define SPLIT_WPM_ENABLE
-#define SPLIT_LAYER_STATE_ENABLE
-#define SPLIT_LED_STATE_ENABLE
-#define SPLIT_OLED_ENABLE
-#define SPLIT_MODS_ENABLE
-#define OLED_TIMEOUT 60000
-#define OLED_FONT_H "users/muellerbernd/glcdfont.c"
+#    define SPLIT_WPM_ENABLE
+#    define SPLIT_LAYER_STATE_ENABLE
+#    define SPLIT_LED_STATE_ENABLE
+#    define SPLIT_OLED_ENABLE
+#    define SPLIT_MODS_ENABLE
+#    define OLED_TIMEOUT 60000
+#    define OLED_FONT_H "users/muellerbernd/glcdfont.c"
 // #define CAT_ENABLE
-#define LUNA_ENABLE
-#define KEYLOGGER_ENABLE
+#    define LUNA_ENABLE
+#    define KEYLOGGER_ENABLE
 // #define OLED_FADE_OUT true
 #endif
 
-// for keyboard-level data sync:
-#ifdef CUSTOM_SPLIT_TRANSPORT_SYNC
-#define SPLIT_TRANSACTION_IDS_USER RPC_ID_USER_KEYLOG_STR, RPC_ID_USER_LUNA
-// Master to slave:
-#define RPC_M2S_BUFFER_SIZE 48
-// Slave to master:
-#define RPC_S2M_BUFFER_SIZE 48
-#endif
+// // for keyboard-level data sync:
+// #ifdef CUSTOM_SPLIT_TRANSPORT_SYNC
+// #    define SPLIT_TRANSACTION_IDS_USER RPC_ID_USER_KEYLOG_STR, RPC_ID_USER_LUNA
+// // Master to slave:
+// #    define RPC_M2S_BUFFER_SIZE 48
+// // Slave to master:
+// #    define RPC_S2M_BUFFER_SIZE 48
+// #endif
 
 // #define OLED_BRIGHTNESS 120
 
@@ -110,22 +110,22 @@
 // #endif
 
 #ifdef LEADER_ENABLE
-#define LEADER_TIMEOUT 300
+#    define LEADER_TIMEOUT 300
 #else
-#define DISABLE_LEADER
+#    define DISABLE_LEADER
 #endif // LEADER_ENABLE
 
 #ifdef POINTING_DEVICE_ENABLE
-#define SPLIT_POINTING_ENABLE
-#define POINTING_DEVICE_RIGHT
-#define MOUSE_EXTENDED_REPORT
+#    define SPLIT_POINTING_ENABLE
+#    define POINTING_DEVICE_RIGHT
+#    define MOUSE_EXTENDED_REPORT
 // #define PIMORONI_TRACKBALL_SCALE 4
 // #define POINTING_DEVICE_TASK_THROTTLE_MS 8
-#define PIMORONI_TRACKBALL_SCALE 7
+#    define PIMORONI_TRACKBALL_SCALE 7
 #endif
 
 #ifdef MOUSEKEY_ENABLE
-#define MOUSEKEY_WHEEL_INTERVAL 110 // 100
+#    define MOUSEKEY_WHEEL_INTERVAL 110 // 100
 // #define MOUSEKEY_WHEEL_MAX_SPEED 3 // 8
 #endif // MOUSEKEY_ENABLE
 
