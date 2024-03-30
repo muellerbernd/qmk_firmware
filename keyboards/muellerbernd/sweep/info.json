@@ -9,9 +9,8 @@
         "device_version": "0.0.1"
     },
     "bootloader_instructions": "Press and hold the boot button while plugging in the keyboard",
-      "processor": "atmega32u4",
-  "bootloader": "caterina",
-
+    "processor": "atmega32u4",
+    "bootloader": "caterina",
     "diode_direction": "COL2ROW",
     "matrix_pins": {
         "cols": [
@@ -33,7 +32,8 @@
         "rotary": [
             {
                 "pin_a": "F5",
-                "pin_b": "F4"
+                "pin_b": "F4",
+                "resolution": 2
             }
         ]
     },
@@ -49,9 +49,9 @@
     },
     "debounce": 5,
     "features": {
-        "bootmagic": true,
+        "bootmagic": false,
         "command": false,
-        "console": true,
+        "console": false,
         "extrakey": true,
         "mousekey": true,
         "nkro": false,
