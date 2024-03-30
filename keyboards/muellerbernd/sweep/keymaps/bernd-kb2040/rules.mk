@@ -40,6 +40,7 @@ endif
 #	CONVERT_TO = kb2040
 #	# BOOTMAGIC_ENABLE = no
 # endif
+CONVERT_TO = kb2040
 
 CUSTOM_SPLIT_TRANSPORT_SYNC ?= no
 ifeq ($(strip $(CUSTOM_SPLIT_TRANSPORT_SYNC)), yes)
