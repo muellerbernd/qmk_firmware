@@ -1,0 +1,11 @@
+{
+  "keyboard_name": "ferris",
+  "manufacturer": "muellerbernd",
+  "url": "",
+  "maintainer": "muellerbernd"
+  "usb": {
+      "vid": "0xFEED",
+      "pid": "0x0000",
+      "device_version": "0.0.1"
+  },
+}
