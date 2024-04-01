@@ -119,3 +119,4 @@ via*.json
 /keyboards/**/keymaps/vial/*
 
 .direnv
+Session.vim
