@@ -44,9 +44,9 @@ endif
 #	# AUDIO_ENABLE = no
 #	# convert to rp2040 pinout. if you use the kb2040 comment this line and uncomment the second line
 #	# CONVERT_TO = promicro_rp2040
-#	CONVERT_TO = kb2040
 #	# BOOTMAGIC_ENABLE = no
 # endif
+CONVERT_TO = kb2040
 
 CUSTOM_SPLIT_TRANSPORT_SYNC ?= no
 ifeq ($(strip $(CUSTOM_SPLIT_TRANSPORT_SYNC)), yes)
