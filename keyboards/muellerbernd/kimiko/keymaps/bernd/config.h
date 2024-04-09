@@ -68,3 +68,5 @@
 #undef KEYLOGGER_ENABLE
 #undef SPLIT_OLED_ENABLE
 #endif
+
+#undef SPLIT_USB_DETECT
