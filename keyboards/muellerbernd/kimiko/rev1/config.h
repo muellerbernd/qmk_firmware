@@ -55,10 +55,10 @@
 #endif
 
 #ifdef ENCODER_ENABLE
-#   define ENCODERS_PAD_A { F4 }
-#   define ENCODERS_PAD_B { F5 }
-#   define ENCODERS_PAD_A_RIGHT { F4 }
-#   define ENCODERS_PAD_B_RIGHT { F5 }
+#   define ENCODER_A_PINS { F4 }
+#   define ENCODER_B_PINS { F5 }
+#   define ENCODER_A_PINS_RIGHT { F4 }
+#   define ENCODER_B_PINS_RIGHT { F5 }
 #endif
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
