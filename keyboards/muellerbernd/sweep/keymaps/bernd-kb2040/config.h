@@ -23,7 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // The pin connected to the data pin of the LEDs
 
 #ifdef RGBLIGHT_ENABLE
-#    define RGBLIGHT_LED_COUNT 34 // Total number of LEDs
+#    define RGBLED_COUNT 34 // Total number of LEDs
 #    define RGBLED_SPLIT \
         { 17, 17 } // LEDs per side
 #    define RGBLIGHT_SPLIT

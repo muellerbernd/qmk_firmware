@@ -58,7 +58,6 @@
         "rgb_matrix": false,
         "rgblight": true,
         "oled": true,
-        "key_override": true,
         "combo": true,
         "encoder": true
     },

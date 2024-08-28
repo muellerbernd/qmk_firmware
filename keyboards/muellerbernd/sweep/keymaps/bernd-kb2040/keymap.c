@@ -2,9 +2,6 @@
 #include "keymap_german.h"
 #include "users/muellerbernd/muellerbernd.h"
 #include <stdio.h>
-#ifdef TAP_DANCE_ENABLE
-#include "users/muellerbernd/tapdance.c"
-#endif
 
 // clang-format off
 
@@ -88,10 +85,10 @@ _______, _______, _______, _______
 #include "users/muellerbernd/leader.c"
 #endif // LEADER_ENABLE
 
-#ifdef COMBO_ENABLE
+/*#ifdef COMBO_ENABLE*/
 // #include "users/muellerbernd/combos.c"
 //#include "g/keymap_combo.h"
-#endif
+/*#endif*/
 
 // SSD1306 OLED update loop, make sure to enable OLED_ENABLE=yes in
 // rules.mk
