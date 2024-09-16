@@ -118,7 +118,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #endif
 
 #ifdef OLED_ENABLE
-#undef LUNA_ENABLE
-#undef KEYLOGGER_ENABLE
 #undef SPLIT_OLED_ENABLE
 #endif
