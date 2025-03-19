@@ -11,7 +11,7 @@
   "rgblight": {
     "saturation_steps": 8,
     "brightness_steps": 8,
-    "led_count": 4,
+    "led_count": 5,
     "sleep": true,
     "animations": {
       "breathing": true,
@@ -57,7 +57,7 @@
   "diode_direction": "COL2ROW",
   "matrix_pins": {
     "cols": ["B3", "B2", "B6"],
-    "rows": ["D7", "E6"]
+    "rows": ["B4", "B5"]
   },
   "layouts": {
     "LAYOUT": {

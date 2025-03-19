@@ -11,7 +11,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         | Left              | Down | Right              |
      */
     [0] = LAYOUT(
-        KC_1, KC_2, KC_3,
+        LT(1,KC_1), KC_2, KC_3,
         KC_4, KC_5, KC_6
     ),
     /*
@@ -19,8 +19,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         | Media Previous | End  | Media Next |
      */
     [1] = LAYOUT(
-        _______, KC_HOME, QK_BOOT,
-        KC_MPRV, KC_END , KC_MNXT
+        _______, RGB_TOG, QK_BOOT,
+        KC_MPRV, RGB_MOD , KC_MNXT
     ),
 };
 
