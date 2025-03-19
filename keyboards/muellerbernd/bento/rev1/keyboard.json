@@ -56,7 +56,7 @@
   },
   "diode_direction": "COL2ROW",
   "matrix_pins": {
-    "cols": ["B6", "B2", "B3"],
+    "cols": ["B3", "B2", "B6"],
     "rows": ["D7", "E6"]
   },
   "layouts": {
