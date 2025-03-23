@@ -11,16 +11,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         | Left              | Down | Right              |
      */
     [0] = LAYOUT(
-        LT(1,KC_1), KC_2, KC_3,
-        KC_4, KC_5, KC_6
+        KC_BRID, KC_BRIU, KC_MUTE,
+        KC_MPRV, KC_MNXT, LT(1, KC_MPLY)
     ),
     /*
         | Held: Layer 2  | Home | QK_BOOT      |
         | Media Previous | End  | Media Next |
      */
     [1] = LAYOUT(
-        _______, RGB_TOG, QK_BOOT,
-        KC_MPRV, RGB_MOD , KC_MNXT
+        RGB_TOG, RGB_VAI, QK_BOOT,
+        RGB_MOD, RGB_VAD, _______
     ),
 };
 
