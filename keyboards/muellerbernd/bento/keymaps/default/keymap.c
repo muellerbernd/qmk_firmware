@@ -1,4 +1,5 @@
 #include QMK_KEYBOARD_H
+#include "quantum.h"
 
 enum layers { _BASE, _RGB, _ADJ, _TEAMS };
 
@@ -11,8 +12,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_MPRV, KC_MNXT, LT(_ADJ, KC_MPLY)
     ),
     [_RGB] = LAYOUT(
-        _______, _______ , _______,
-        _______, _______ , TT(_RGB)
+        RGB_MOD, RGB_SAI , RGB_TOG,
+        RGB_RMOD, RGB_SAD , TT(_RGB)
     ),
     [_TEAMS] = LAYOUT(
         _______, _______ , _______ ,
@@ -25,19 +26,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // clang-format on
 };
 
-bool encoder_update_user(uint8_t index, bool clockwise) {
-    switch (get_highest_layer(layer_state)) {
-        case 1:
-            // Default encoder behavior of Page Up and Down
-            clockwise ? tap_code(KC_PGDN) : tap_code(KC_PGUP);
-            break;
-        default:
-            // Change volume when on nav layer
-            clockwise ? tap_code(KC_AUDIO_VOL_UP) : tap_code(KC_AUDIO_VOL_DOWN);
-            break;
-    }
-    return true;
-}
 #ifdef RGBLIGHT_ENABLE
 
 /*Light 4 LEDs, starting with LED 0*/
@@ -54,11 +42,41 @@ void keyboard_post_init_user(void) {
 
 layer_state_t layer_state_set_user(layer_state_t state) {
     rgblight_set_layer_state(0, layer_state_cmp(state, _TEAMS));
-    rgblight_set_layer_state(1, layer_state_cmp(state, _RGB));
+    /*rgblight_set_layer_state(1, layer_state_cmp(state, _RGB));*/
     /*rgblight_set_layer_state(1, layer_state_cmp(state, _W));*/
     /*rgblight_set_layer_state(2, layer_state_cmp(state, _F));*/
     /*rgblight_set_layer_state(3, layer_state_cmp(state, _M));*/
     return state;
 }
 
+#    ifdef ENCODER_ENABLE
+
+bool encoder_update_kb(uint8_t index, bool clockwise) {
+    if (!encoder_update_user(index, clockwise)) {
+        return false;
+    }
+    switch (get_highest_layer(layer_state | default_layer_state)) {
+        case _RGB:
+            clockwise ? rgblight_increase_val() : rgblight_decrease_val();
+            break;
+        default:
+            clockwise ? tap_code(KC_AUDIO_VOL_UP) : tap_code(KC_AUDIO_VOL_DOWN);
+            break;
+    }
+    /*if (get_highest_layer(layer_state) > 0) {*/
+    /*    if (clockwise) {*/
+    /*        tap_code_delay(KC_VOLU, 10);*/
+    /*    } else {*/
+    /*        tap_code_delay(KC_VOLD, 10);*/
+    /*    }*/
+    /*} else {*/
+    /*    if (clockwise) {*/
+    /*        tap_code(KC_PGDN);*/
+    /*    } else {*/
+    /*        tap_code(KC_PGUP);*/
+    /*    }*/
+    /*}*/
+    return true;
+}
+#    endif
 #endif
