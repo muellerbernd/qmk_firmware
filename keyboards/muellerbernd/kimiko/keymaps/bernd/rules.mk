@@ -1,4 +1,4 @@
-RGBLIGHT_ENABLE = yes       # Enable WS2812 RGB underlight.
+RGBLIGHT_ENABLE = no       # Enable WS2812 RGB underlight.
 RGB_MATRIX_ENABLE = no
 RGB_MATRIX_DRIVER = WS2812
 RGB_MATRIX_CUSTOM_USER = no #only need this if using custom effects
@@ -8,8 +8,8 @@ WPM_ENABLE = no
 MOUSEKEY_ENABLE = yes       # Mouse keys
 EXTRAKEY_ENABLE = yes       # Audio control and System control
 ENCODER_ENABLE = yes      # use an encoder
-LTO_ENABLE = yes            # significantly reduce the compiled size, but disable the legacy TMK Macros and Functions features
-EXTRAFLAGS+=-flto
+LTO_ENABLE = no            # significantly reduce the compiled size, but disable the legacy TMK Macros and Functions features
+# EXTRAFLAGS+=-flto
 # EXTRAFLAGS += -ffat-lto-objects
 COMBO_ENABLE = yes
 TAP_DANCE_ENABLE = no
