@@ -48,11 +48,11 @@ endif
 # endif
 CONVERT_TO = kb2040
 
-CUSTOM_SPLIT_TRANSPORT_SYNC ?= no
-ifeq ($(strip $(CUSTOM_SPLIT_TRANSPORT_SYNC)), yes)
-	# QUANTUM_LIB_SRC += $(USER_PATH)/split/transport_sync.c
-	OPT_DEFS += -DCUSTOM_SPLIT_TRANSPORT_SYNC
-endif
-
-# RP2040-specific options
-PICO_INTRINSICS_ENABLED = no # ATM Unsupported by ChibiOS.
+# CUSTOM_SPLIT_TRANSPORT_SYNC ?= no
+# ifeq ($(strip $(CUSTOM_SPLIT_TRANSPORT_SYNC)), yes)
+#	# QUANTUM_LIB_SRC += $(USER_PATH)/split/transport_sync.c
+#	OPT_DEFS += -DCUSTOM_SPLIT_TRANSPORT_SYNC
+# endif
+#
+# # RP2040-specific options
+# PICO_INTRINSICS_ENABLED = no # ATM Unsupported by ChibiOS.
