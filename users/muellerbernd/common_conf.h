@@ -131,5 +131,5 @@
 
 // fix not detecting of keyboard on boot or on docking station
 #define SPLIT_USB_DETECT
-#define NO_USB_STARTUP_CHECK
+// #define NO_USB_STARTUP_CHECK
 #define SPLIT_WATCHDOG_ENABLE
