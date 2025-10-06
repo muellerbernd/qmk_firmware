@@ -34,4 +34,4 @@ UNICODE_ENABLE = no         # Unicode
 
 LTO_ENABLE = yes            # significantly reduce the compiled size, but disable the legacy TMK Macros and Functions features
 EXTRAFLAGS += -flto
-DEFAULT_FOLDER = bernd/myKimiko/rev1
+# DEFAULT_FOLDER = bernd/myKimiko/rev1
