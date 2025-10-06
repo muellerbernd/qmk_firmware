@@ -34,18 +34,18 @@
         }
     },
     "ws2812": {
-        "pin": "D3"
+        "pin": "GP0",
+        "driver": "vendor"
     },
     "encoder": {
         "rotary": [
             {
-                "pin_a": "D1",
-                "pin_b": "D0"
+                "pin_a": "GP2",
+                "pin_b": "GP3"
             }
         ]
     },
-    "processor": "atmega32u4",
-    "bootloader": "caterina",
+    "development_board": "kb2040",
     "features": {
         "bootmagic": false,
         "mousekey": false,
@@ -64,13 +64,13 @@
     "diode_direction": "COL2ROW",
     "matrix_pins": {
         "cols": [
-            "B3",
-            "B2",
-            "B6"
+            "GP10",
+            "GP19",
+            "GP10"
         ],
         "rows": [
-            "B4",
-            "B5"
+            "GP8",
+            "GP9"
         ]
     },
     "layouts": {

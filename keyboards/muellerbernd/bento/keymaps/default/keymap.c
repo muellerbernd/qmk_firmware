@@ -12,8 +12,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_MPRV, KC_MNXT, LT(_ADJ, KC_MPLY)
     ),
     [_RGB] = LAYOUT(
-        RGB_MOD, RGB_SAI , RGB_TOG,
-        RGB_RMOD, RGB_SAD , TT(_RGB)
+        UG_NEXT, UG_SATU , UG_TOGG,
+        UG_PREV, UG_SATD , TT(_RGB)
     ),
     [_TEAMS] = LAYOUT(
         _______, _______ , _______ ,
