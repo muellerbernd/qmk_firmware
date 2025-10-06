@@ -11,6 +11,7 @@
   "bootloader_instructions": "Press and hold the boot button while plugging in the keyboard",
   "processor": "atmega32u4",
   "bootloader": "caterina",
+  "pin_compatible": "promicro",
   "diode_direction": "COL2ROW",
   "matrix_pins": {
     "cols": ["B6", "B2", "B3", "B1", "F7"],
