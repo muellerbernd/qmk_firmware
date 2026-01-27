@@ -64,7 +64,7 @@
     "diode_direction": "COL2ROW",
     "matrix_pins": {
         "cols": [
-            "GP10",
+            "GP20",
             "GP19",
             "GP10"
         ],

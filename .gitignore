@@ -131,3 +131,4 @@ via*.json
 
 .direnv
 Session.vim
+.ccls-cache

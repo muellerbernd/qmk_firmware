@@ -2,13 +2,14 @@
 #include "quantum.h"
 
 enum layers { _BASE, _RGB, _ADJ, _TEAMS };
+#define LCK LGUI(KC_ESC)
 
 #define T_MUTE
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // clang-format off
     [_BASE] = LAYOUT(
-        TT(_RGB),TT(_TEAMS), KC_MUTE,
+        LCK, TT(_RGB), KC_MUTE,
         KC_MPRV, KC_MNXT, LT(_ADJ, KC_MPLY)
     ),
     [_RGB] = LAYOUT(
