@@ -3,14 +3,15 @@
 
 enum layers { _BASE, _RGB, _ADJ, _TEAMS };
 #define LCK LGUI(KC_ESC)
+#define DLCK LGUI(LSFT(KC_ESC))
 
 #define T_MUTE
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // clang-format off
     [_BASE] = LAYOUT(
-        LCK, TT(_RGB), KC_MUTE,
-        KC_MPRV, KC_MNXT, LT(_ADJ, KC_MPLY)
+        DLCK   , TT(_RGB), KC_MUTE,
+        KC_MPRV, KC_MNXT , LT(_ADJ, KC_MPLY)
     ),
     [_RGB] = LAYOUT(
         UG_NEXT, UG_SATU , UG_TOGG,
@@ -21,7 +22,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, _______ , TT(_TEAMS)
     ),
     [_ADJ] = LAYOUT(
-        _______, _______, QK_BOOT,
+        LCK    , _______, QK_BOOT,
         _______, _______, _______
     ),
     // clang-format on
