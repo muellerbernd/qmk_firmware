@@ -1,11 +1,9 @@
 #include QMK_KEYBOARD_H
 #include "quantum.h"
 
-enum layers { _BASE, _RGB, _ADJ, _TEAMS };
+enum layers { _BASE, _RGB, _ADJ, _CVAT };
 #define LCK LGUI(KC_ESC)
 #define DLCK LGUI(LSFT(KC_ESC))
-
-#define T_MUTE
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // clang-format off
@@ -14,16 +12,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_MPRV, KC_MNXT , LT(_ADJ, KC_MPLY)
     ),
     [_RGB] = LAYOUT(
-        UG_NEXT, UG_SATU , UG_TOGG,
-        UG_PREV, UG_SATD , TT(_RGB)
+        UG_NEXT, UG_SATU , TG(_RGB),
+        UG_PREV, UG_SATD , UG_TOGG
     ),
-    [_TEAMS] = LAYOUT(
-        _______, _______ , _______ ,
-        _______, _______ , TT(_TEAMS)
+    [_CVAT] = LAYOUT(
+        _______, _______ , TG(_CVAT) ,
+           KC_D,    KC_F , KC_N
     ),
     [_ADJ] = LAYOUT(
-        LCK    , _______, QK_BOOT,
-        _______, _______, _______
+        LCK    ,  TG(_RGB), QK_BOOT,
+        _______, TG(_CVAT), _______
     ),
     // clang-format on
 };
@@ -31,19 +29,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #ifdef RGBLIGHT_ENABLE
 
 /*Light 4 LEDs, starting with LED 0*/
-const rgblight_segment_t PROGMEM my_teams_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 4, HSV_PURPLE});
+const rgblight_segment_t PROGMEM my_cvat_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 4, HSV_PURPLE});
 
 const rgblight_segment_t PROGMEM my_rgb_layer[] = RGBLIGHT_LAYER_SEGMENTS({0, 2, HSV_RED});
 
 /*define layers*/
-const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(my_teams_layer, my_rgb_layer);
+const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(my_cvat_layer, my_rgb_layer);
 
 void keyboard_post_init_user(void) {
     rgblight_layers = my_rgb_layers; // Load layer definitions from memory
 }
 
 layer_state_t layer_state_set_user(layer_state_t state) {
-    rgblight_set_layer_state(0, layer_state_cmp(state, _TEAMS));
+    rgblight_set_layer_state(0, layer_state_cmp(state, _CVAT));
     /*rgblight_set_layer_state(1, layer_state_cmp(state, _RGB));*/
     /*rgblight_set_layer_state(1, layer_state_cmp(state, _W));*/
     /*rgblight_set_layer_state(2, layer_state_cmp(state, _F));*/
