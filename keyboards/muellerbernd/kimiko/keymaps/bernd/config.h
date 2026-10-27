@@ -19,7 +19,9 @@
 
 #ifdef RGBLIGHT_ENABLE
 #define RGBLIGHT_SPLIT
-// #define RGBLIGHT_LIMIT_VAL 80
+#define RGBLIGHT_LIMIT_VAL 120
+// Slow down the bitbang split link so it tolerates the WS2812 flush jitter
+#define SELECT_SOFT_SERIAL_SPEED 2
 // Limit the power draw
 // #define RGBLIGHT_EFFECT_RGB_TEST
 // #define RGBLIGHT_EFFECT_BREATHING
